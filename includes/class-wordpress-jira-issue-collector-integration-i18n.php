@@ -9,8 +9,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/includes
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/includes
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/includes
  * @author     Josh Hargreaves <me@joshhargreaves.co.uk>
  */
-class Wordpress_Jira_Issue_Collector_Integration_i18n {
+class Jira_Issue_Collector_Integration_i18n {
 
 
 	/**

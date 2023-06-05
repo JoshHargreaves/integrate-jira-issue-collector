@@ -10,7 +10,7 @@
  *
  * @link              https://https://www.joshhargreaves.co.uk
  * @since             1.0.0
- * @package           Wordpress_Jira_Issue_Collector_Integration
+ * @package           Jira_Issue_Collector_Integration
  *
  * @wordpress-plugin
  * Plugin Name:       Wordpress Jira Issue Collector Integration
@@ -35,28 +35,28 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'WORDPRESS_JIRA_ISSUE_COLLECTOR_INTEGRATION_VERSION', '1.0.0' );
+define( 'Jira_Issue_Collector_Integration_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
  * This action is documented in includes/class-wordpress-jira-issue-collector-integration-activator.php
  */
-function activate_wordpress_jira_issue_collector_integration() {
+function activate_Jira_Issue_Collector_Integration() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-jira-issue-collector-integration-activator.php';
-	Wordpress_Jira_Issue_Collector_Integration_Activator::activate();
+	Jira_Issue_Collector_Integration_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
  * This action is documented in includes/class-wordpress-jira-issue-collector-integration-deactivator.php
  */
-function deactivate_wordpress_jira_issue_collector_integration() {
+function deactivate_Jira_Issue_Collector_Integration() {
 	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-jira-issue-collector-integration-deactivator.php';
-	Wordpress_Jira_Issue_Collector_Integration_Deactivator::deactivate();
+	Jira_Issue_Collector_Integration_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_wordpress_jira_issue_collector_integration' );
-register_deactivation_hook( __FILE__, 'deactivate_wordpress_jira_issue_collector_integration' );
+register_activation_hook( __FILE__, 'activate_Jira_Issue_Collector_Integration' );
+register_deactivation_hook( __FILE__, 'deactivate_Jira_Issue_Collector_Integration' );
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -73,9 +73,9 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-jira-issue-colle
  *
  * @since    1.0.0
  */
-function run_wordpress_jira_issue_collector_integration() {
+function run_Jira_Issue_Collector_Integration() {
 
-	$plugin = new Wordpress_Jira_Issue_Collector_Integration();
+	$plugin = new Jira_Issue_Collector_Integration();
 	$plugin->run();
 
 }
@@ -84,4 +84,4 @@ if( !defined('ABSPATH'))
     exit;
 }
 
-run_wordpress_jira_issue_collector_integration();
+run_Jira_Issue_Collector_Integration();

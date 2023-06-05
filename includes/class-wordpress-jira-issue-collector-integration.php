@@ -9,8 +9,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/includes
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/includes
  */
 
 /**
@@ -23,11 +23,11 @@
  * version of the plugin.
  *
  * @since      1.0.0
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/includes
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/includes
  * @author     Josh Hargreaves <me@joshhargreaves.co.uk>
  */
-class Wordpress_Jira_Issue_Collector_Integration {
+class Jira_Issue_Collector_Integration {
 
 	/**
 	 * The loader that's responsible for maintaining and registering all hooks that power
@@ -35,7 +35,7 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 *
 	 * @since    1.0.0
 	 * @access   protected
-	 * @var      Wordpress_Jira_Issue_Collector_Integration_Loader    $loader    Maintains and registers all hooks for the plugin.
+	 * @var      Jira_Issue_Collector_Integration_Loader    $loader    Maintains and registers all hooks for the plugin.
 	 */
 	protected $loader;
 
@@ -76,8 +76,8 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 * @since    1.0.0
 	 */
 	public function __construct() {
-		if ( defined( 'WORDPRESS_JIRA_ISSUE_COLLECTOR_INTEGRATION_VERSION' ) ) {
-			$this->version = WORDPRESS_JIRA_ISSUE_COLLECTOR_INTEGRATION_VERSION;
+		if ( defined( 'Jira_Issue_Collector_Integration_VERSION' ) ) {
+			$this->version = Jira_Issue_Collector_Integration_VERSION;
 		} else {
 			$this->version = '1.0.0';
 		}
@@ -96,10 +96,10 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 *
 	 * Include the following files that make up the plugin:
 	 *
-	 * - Wordpress_Jira_Issue_Collector_Integration_Loader. Orchestrates the hooks of the plugin.
-	 * - Wordpress_Jira_Issue_Collector_Integration_i18n. Defines internationalization functionality.
-	 * - Wordpress_Jira_Issue_Collector_Integration_Admin. Defines all hooks for the admin area.
-	 * - Wordpress_Jira_Issue_Collector_Integration_Public. Defines all hooks for the public side of the site.
+	 * - Jira_Issue_Collector_Integration_Loader. Orchestrates the hooks of the plugin.
+	 * - Jira_Issue_Collector_Integration_i18n. Defines internationalization functionality.
+	 * - Jira_Issue_Collector_Integration_Admin. Defines all hooks for the admin area.
+	 * - Jira_Issue_Collector_Integration_Public. Defines all hooks for the public side of the site.
 	 *
 	 * Create an instance of the loader which will be used to register the hooks
 	 * with WordPress.
@@ -132,14 +132,14 @@ class Wordpress_Jira_Issue_Collector_Integration {
 		 */
 		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wordpress-jira-issue-collector-integration-public.php';
 
-		$this->loader = new Wordpress_Jira_Issue_Collector_Integration_Loader();
+		$this->loader = new Jira_Issue_Collector_Integration_Loader();
 
 	}
 
 	/**
 	 * Define the locale for this plugin for internationalization.
 	 *
-	 * Uses the Wordpress_Jira_Issue_Collector_Integration_i18n class in order to set the domain and to register the hook
+	 * Uses the Jira_Issue_Collector_Integration_i18n class in order to set the domain and to register the hook
 	 * with WordPress.
 	 *
 	 * @since    1.0.0
@@ -147,7 +147,7 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 */
 	private function set_locale() {
 
-		$plugin_i18n = new Wordpress_Jira_Issue_Collector_Integration_i18n();
+		$plugin_i18n = new Jira_Issue_Collector_Integration_i18n();
 
 		$this->loader->add_action( 'plugins_loaded', $plugin_i18n, 'load_plugin_textdomain' );
 
@@ -162,7 +162,7 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 */
 	private function define_admin_hooks() {
 
-		$plugin_admin = new Wordpress_Jira_Issue_Collector_Integration_Admin( $this->get_plugin_name(), $this->get_version() );
+		$plugin_admin = new Jira_Issue_Collector_Integration_Admin( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_styles' );
 		$this->loader->add_action( 'admin_enqueue_scripts', $plugin_admin, 'enqueue_scripts' );
@@ -181,7 +181,7 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 */
 	private function define_public_hooks() {
 
-		$plugin_public = new Wordpress_Jira_Issue_Collector_Integration_Public( $this->get_plugin_name(), $this->get_version() );
+		$plugin_public = new Jira_Issue_Collector_Integration_Public( $this->get_plugin_name(), $this->get_version() );
 
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_styles' );
 		$this->loader->add_action( 'wp_enqueue_scripts', $plugin_public, 'enqueue_scripts' );
@@ -212,7 +212,7 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	 * The reference to the class that orchestrates the hooks with the plugin.
 	 *
 	 * @since     1.0.0
-	 * @return    Wordpress_Jira_Issue_Collector_Integration_Loader    Orchestrates the hooks of the plugin.
+	 * @return    Jira_Issue_Collector_Integration_Loader    Orchestrates the hooks of the plugin.
 	 */
 	public function get_loader() {
 		return $this->loader;

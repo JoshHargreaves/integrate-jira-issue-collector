@@ -8,8 +8,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/admin/partials
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/admin/partials
  */
 ?>
 

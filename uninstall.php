@@ -22,7 +22,7 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
+ * @package    Jira_Issue_Collector_Integration
  */
 
 // If uninstall not called from WordPress, then exit.
