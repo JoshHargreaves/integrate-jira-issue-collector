@@ -1,0 +1,12 @@
+/**
+ * All of the CSS for your admin-specific functionality should be
+ * included in this file.
+ */
+
+
+ .atlwdg-trigger.atlwdg-TOP {
+    right:0 !important;
+    left: unset !important;
+    z-index:1;
+    top: 50% !important;
+    }
