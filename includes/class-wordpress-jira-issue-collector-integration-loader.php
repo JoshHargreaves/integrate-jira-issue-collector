@@ -6,8 +6,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/includes
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/includes
  */
 
 /**
@@ -17,11 +17,11 @@
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/includes
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/includes
  * @author     Josh Hargreaves <me@joshhargreaves.co.uk>
  */
-class Wordpress_Jira_Issue_Collector_Integration_Loader {
+class Jira_Issue_Collector_Integration_Loader {
 
 	/**
 	 * The array of actions registered with WordPress.

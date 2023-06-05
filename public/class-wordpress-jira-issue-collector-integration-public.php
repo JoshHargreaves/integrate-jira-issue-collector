@@ -6,8 +6,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/public
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/public
  */
 
 /**
@@ -16,11 +16,11 @@
  * Defines the plugin name, version, and two examples hooks for how to
  * enqueue the public-facing stylesheet and JavaScript.
  *
- * @package    Wordpress_Jira_Issue_Collector_Integration
- * @subpackage Wordpress_Jira_Issue_Collector_Integration/public
+ * @package    Jira_Issue_Collector_Integration
+ * @subpackage Jira_Issue_Collector_Integration/public
  * @author     Josh Hargreaves <me@joshhargreaves.co.uk>
  */
-class Wordpress_Jira_Issue_Collector_Integration_Public {
+class Jira_Issue_Collector_Integration_Public {
 
 	/**
 	 * The ID of this plugin.
@@ -65,10 +65,10 @@ class Wordpress_Jira_Issue_Collector_Integration_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wordpress_Jira_Issue_Collector_Integration_Loader as all of the hooks are defined
+		 * defined in Jira_Issue_Collector_Integration_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wordpress_Jira_Issue_Collector_Integration_Loader will then create the relationship
+		 * The Jira_Issue_Collector_Integration_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
@@ -88,10 +88,10 @@ class Wordpress_Jira_Issue_Collector_Integration_Public {
 		 * This function is provided for demonstration purposes only.
 		 *
 		 * An instance of this class should be passed to the run() function
-		 * defined in Wordpress_Jira_Issue_Collector_Integration_Loader as all of the hooks are defined
+		 * defined in Jira_Issue_Collector_Integration_Loader as all of the hooks are defined
 		 * in that particular class.
 		 *
-		 * The Wordpress_Jira_Issue_Collector_Integration_Loader will then create the relationship
+		 * The Jira_Issue_Collector_Integration_Loader will then create the relationship
 		 * between the defined hooks and the functions defined in this
 		 * class.
 		 */
