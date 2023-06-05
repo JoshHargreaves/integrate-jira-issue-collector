@@ -240,8 +240,8 @@ class Wordpress_Jira_Issue_Collector_Integration {
 
 	public function register_settings() {
 		register_setting( $this->prefix.'_options', $this->prefix.'_options', $this->prefix.'_options_validate' );
-		add_settings_section( 'collector_url', 'Collector Settings', array($this, $this->prefix.'_section_text'), $this->prefix );
-		add_settings_field( $this->prefix.'_setting_collector_url', 'Collector URL', array($this, $this->prefix.'_setting_collector_url'), $this->prefix, 'collector_url' );
+		add_settings_section( 'collector_url', 'Collector Settings', array( $this, $this->prefix.'_section_text'), $this->prefix );
+		add_settings_field( $this->prefix.'_setting_collector_url', 'Collector URL', array( $this, $this->prefix.'_setting_collector_url'), $this->prefix, 'collector_url' );
 	}
 
 	function wjici_plugin_section_text() {
@@ -256,7 +256,7 @@ class Wordpress_Jira_Issue_Collector_Integration {
 	function display_issue_collector(){
 		$options = get_option( $this->prefix.'_options' );
 		echo 'hi';
-		echo '<script type="text/javascript" src="' . esc_js(esc_url($options['collector_url'])) . '"</script>';
+		echo '<script type="text/javascript" src="' . esc_js( esc_url( $options['collector_url'])) . '"</script>';
 	}
 
 
