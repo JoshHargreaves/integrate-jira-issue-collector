@@ -13,7 +13,7 @@
  * @package           Jira_Issue_Collector_Integration
  *
  * @wordpress-plugin
- * Plugin Name:       Wordpress Jira Issue Collector Integration
+ * Plugin Name:       Jira Issue Collector Integration
  * Plugin URI:        https://joshhargreaves.co.uk
  * Description:       Easily integrate jira issue collector into the admin side of your wordpress site
  * Version:           1.0.0
@@ -21,7 +21,7 @@
  * Author URI:        https://https://www.joshhargreaves.co.uk
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       wordpress-jira-issue-collector-integration
+ * Text Domain:       jira-issue-collector-integration
  * Domain Path:       /languages
  */
 
@@ -39,19 +39,19 @@ define( 'Jira_Issue_Collector_Integration_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-wordpress-jira-issue-collector-integration-activator.php
+ * This action is documented in includes/class-jira-issue-collector-integration-activator.php
  */
 function activate_Jira_Issue_Collector_Integration() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-jira-issue-collector-integration-activator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integration-activator.php';
 	Jira_Issue_Collector_Integration_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-wordpress-jira-issue-collector-integration-deactivator.php
+ * This action is documented in includes/class-jira-issue-collector-integration-deactivator.php
  */
 function deactivate_Jira_Issue_Collector_Integration() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-jira-issue-collector-integration-deactivator.php';
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integration-deactivator.php';
 	Jira_Issue_Collector_Integration_Deactivator::deactivate();
 }
 
@@ -62,7 +62,7 @@ register_deactivation_hook( __FILE__, 'deactivate_Jira_Issue_Collector_Integrati
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-wordpress-jira-issue-collector-integration.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integration.php';
 
 /**
  * Begins execution of the plugin.

@@ -81,7 +81,7 @@ class Jira_Issue_Collector_Integration {
 		} else {
 			$this->version = '1.0.0';
 		}
-		$this->plugin_name = 'wordpress-jira-issue-collector-integration';
+		$this->plugin_name = 'jira-issue-collector-integration';
 		$this->prefix = 'wjici_plugin';
 
 		$this->load_dependencies();
@@ -113,24 +113,24 @@ class Jira_Issue_Collector_Integration {
 		 * The class responsible for orchestrating the actions and filters of the
 		 * core plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wordpress-jira-issue-collector-integration-loader.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-jira-issue-collector-integration-loader.php';
 
 		/**
 		 * The class responsible for defining internationalization functionality
 		 * of the plugin.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-wordpress-jira-issue-collector-integration-i18n.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-jira-issue-collector-integration-i18n.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the admin area.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-wordpress-jira-issue-collector-integration-admin.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'admin/class-jira-issue-collector-integration-admin.php';
 
 		/**
 		 * The class responsible for defining all actions that occur in the public-facing
 		 * side of the site.
 		 */
-		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-wordpress-jira-issue-collector-integration-public.php';
+		require_once plugin_dir_path( dirname( __FILE__ ) ) . 'public/class-jira-issue-collector-integration-public.php';
 
 		$this->loader = new Jira_Issue_Collector_Integration_Loader();
 
@@ -230,10 +230,10 @@ class Jira_Issue_Collector_Integration {
 
 	public function add_admin_menu_links() {
 		add_options_page(
-			'Wordpress Jira Issue Collector Integration',// page title  
+			'Jira Issue Collector Integration',// page title  
 			'Issue Collector',// menu title  
 			'manage_options',// capability  
-			'wordpress-jira-issue-collector-integration',// menu slug  
+			'jira-issue-collector-integration',// menu slug  
 			array($this, 'settings_page' )  // callback function  
 		);  
 	}
@@ -262,7 +262,7 @@ class Jira_Issue_Collector_Integration {
 
 	public function settings_page(){
 		?>
-		<h2>Wordpress Jira Issue Collector Integration</h2>
+		<h2>Jira Issue Collector Integration</h2>
 		<form action="options.php" method="post">
 			<?php 
 			settings_fields( $this->prefix.'_options' );

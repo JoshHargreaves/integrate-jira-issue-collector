@@ -35,7 +35,7 @@ class Jira_Issue_Collector_Integration_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'wordpress-jira-issue-collector-integration',
+			'jira-issue-collector-integration',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);
