@@ -9,8 +9,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Jira_Issue_Collector_Integration
- * @subpackage Jira_Issue_Collector_Integration/includes
+ * @package    Integrate_Jira_Issue_Collector
+ * @subpackage Integrate_Jira_Issue_Collector/includes
  */
 
 /**
@@ -20,11 +20,11 @@
  * so that it is ready for translation.
  *
  * @since      1.0.0
- * @package    Jira_Issue_Collector_Integration
- * @subpackage Jira_Issue_Collector_Integration/includes
+ * @package    Integrate_Jira_Issue_Collector
+ * @subpackage Integrate_Jira_Issue_Collector/includes
  * @author     Josh Hargreaves <me@joshhargreaves.co.uk>
  */
-class Jira_Issue_Collector_Integration_i18n {
+class Integrate_Jira_Issue_Collector_i18n {
 
 
 	/**
@@ -35,7 +35,7 @@ class Jira_Issue_Collector_Integration_i18n {
 	public function load_plugin_textdomain() {
 
 		load_plugin_textdomain(
-			'jira-issue-collector-integration',
+			'integrate-jira-issue-collector',
 			false,
 			dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
 		);

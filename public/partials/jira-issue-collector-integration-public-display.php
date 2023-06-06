@@ -8,8 +8,8 @@
  * @link       https://https://www.joshhargreaves.co.uk
  * @since      1.0.0
  *
- * @package    Jira_Issue_Collector_Integration
- * @subpackage Jira_Issue_Collector_Integration/public/partials
+ * @package    Integrate_Jira_Issue_Collector
+ * @subpackage Integrate_Jira_Issue_Collector/public/partials
  */
 ?>
 

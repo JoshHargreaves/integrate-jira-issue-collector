@@ -10,10 +10,10 @@
  *
  * @link              https://https://www.joshhargreaves.co.uk
  * @since             1.0.0
- * @package           Jira_Issue_Collector_Integration
+ * @package           Integrate_Jira_Issue_Collector
  *
  * @wordpress-plugin
- * Plugin Name:       Jira Issue Collector Integration
+ * Plugin Name:       Integrate Jira Issue Collector
  * Plugin URI:        https://joshhargreaves.co.uk
  * Description:       Easily integrate jira issue collector into the admin side of your wordpress site
  * Version:           1.0.0
@@ -21,7 +21,7 @@
  * Author URI:        https://https://www.joshhargreaves.co.uk
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       jira-issue-collector-integration
+ * Text Domain:       integrate-jira-issue-collector
  * Domain Path:       /languages
  */
 
@@ -35,34 +35,34 @@ if ( ! defined( 'WPINC' ) ) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define( 'Jira_Issue_Collector_Integration_VERSION', '1.0.0' );
+define( 'Integrate_Jira_Issue_Collector_VERSION', '1.0.0' );
 
 /**
  * The code that runs during plugin activation.
- * This action is documented in includes/class-jira-issue-collector-integration-activator.php
+ * This action is documented in includes/class-integrate-jira-issue-collector-activator.php
  */
-function activate_Jira_Issue_Collector_Integration() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integration-activator.php';
-	Jira_Issue_Collector_Integration_Activator::activate();
+function activate_Integrate_Jira_Issue_Collector() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-integrate-jira-issue-collector-activator.php';
+	Integrate_Jira_Issue_Collector_Activator::activate();
 }
 
 /**
  * The code that runs during plugin deactivation.
- * This action is documented in includes/class-jira-issue-collector-integration-deactivator.php
+ * This action is documented in includes/class-integrate-jira-issue-collector-deactivator.php
  */
-function deactivate_Jira_Issue_Collector_Integration() {
-	require_once plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integration-deactivator.php';
-	Jira_Issue_Collector_Integration_Deactivator::deactivate();
+function deactivate_Integrate_Jira_Issue_Collector() {
+	require_once plugin_dir_path( __FILE__ ) . 'includes/class-integrate-jira-issue-collector-deactivator.php';
+	Integrate_Jira_Issue_Collector_Deactivator::deactivate();
 }
 
-register_activation_hook( __FILE__, 'activate_Jira_Issue_Collector_Integration' );
-register_deactivation_hook( __FILE__, 'deactivate_Jira_Issue_Collector_Integration' );
+register_activation_hook( __FILE__, 'activate_Integrate_Jira_Issue_Collector' );
+register_deactivation_hook( __FILE__, 'deactivate_Integrate_Jira_Issue_Collector' );
 
 /**
  * The core plugin class that is used to define internationalization,
  * admin-specific hooks, and public-facing site hooks.
  */
-require plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integration.php';
+require plugin_dir_path( __FILE__ ) . 'includes/class-integrate-jira-issue-collector.php';
 
 /**
  * Begins execution of the plugin.
@@ -73,9 +73,9 @@ require plugin_dir_path( __FILE__ ) . 'includes/class-jira-issue-collector-integ
  *
  * @since    1.0.0
  */
-function run_Jira_Issue_Collector_Integration() {
+function run_Integrate_Jira_Issue_Collector() {
 
-	$plugin = new Jira_Issue_Collector_Integration();
+	$plugin = new Integrate_Jira_Issue_Collector();
 	$plugin->run();
 
 }
@@ -84,4 +84,4 @@ if( !defined('ABSPATH'))
     exit;
 }
 
-run_Jira_Issue_Collector_Integration();
+run_Integrate_Jira_Issue_Collector();
