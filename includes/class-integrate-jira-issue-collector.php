@@ -82,7 +82,7 @@ class Integrate_Jira_Issue_Collector {
 			$this->version = '1.0.0';
 		}
 		$this->plugin_name = 'integrate-jira-issue-collector';
-		$this->prefix = 'wjici_plugin';
+		$this->prefix = 'ijic_plugin';
 
 		$this->load_dependencies();
 		$this->set_locale();
@@ -244,13 +244,13 @@ class Integrate_Jira_Issue_Collector {
 		add_settings_field( $this->prefix.'_setting_collector_url', 'Collector URL', array( $this, $this->prefix.'_setting_collector_url'), $this->prefix, 'collector_url' );
 	}
 
-	function wjici_plugin_section_text() {
+	function ijic_plugin_section_text() {
 		echo '<p>Here you can set all the options for using the API</p>';
 	}
 
-	function wjici_plugin_setting_collector_url() {
+	function ijic_plugin_setting_collector_url() {
 		$options = get_option( $this->prefix.'_options' );
-		echo "<textarea rows='8' cols='80' id='wjici_plugin_setting_collector_url' name='wjici_plugin_options[collector_url]' type='text'/>" . esc_textarea( $options['collector_url'] ) . "</textarea>";
+		echo "<textarea rows='8' cols='80' id='ijic_plugin_setting_collector_url' name='ijic_plugin_options[collector_url]' type='text'/>" . esc_textarea( $options['collector_url'] ) . "</textarea>";
 	}
 
 	function display_issue_collector(){
@@ -266,7 +266,7 @@ class Integrate_Jira_Issue_Collector {
 		<form action="options.php" method="post">
 			<?php 
 			settings_fields( $this->prefix.'_options' );
-			do_settings_sections( 'wjici_plugin' ); ?>
+			do_settings_sections( 'ijic_plugin' ); ?>
 			<input name="submit" class="button button-primary" type="submit" value="<?php esc_attr_e( 'Save' ); ?>" />
 		</form>
 		<?php
