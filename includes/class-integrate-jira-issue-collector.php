@@ -253,10 +253,15 @@ class Integrate_Jira_Issue_Collector {
 		echo "<textarea rows='8' cols='80' id='ijic_plugin_setting_collector_url' name='ijic_plugin_options[collector_url]' type='text'/>" . esc_textarea( $options['collector_url'] ) . "</textarea>";
 	}
 
-	function display_issue_collector(){
+	function admin_inline_js() {
 		$options = get_option( $this->prefix.'_options' );
-		echo 'hi';
-		echo '<script type="text/javascript" src="' . esc_js( esc_url( $options['collector_url'])) . '"</script>';
+		echo "<script type='text/javascript'\n";
+		echo 'src = '. $options['collector_url'].'>';
+		echo "\n</script>"; 
+	}
+
+	function display_issue_collector(){
+		add_action( 'admin_print_scripts', array( $this, 'admin_inline_js') );
 	}
 
 
