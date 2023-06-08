@@ -256,7 +256,7 @@ class Integrate_Jira_Issue_Collector {
 	function admin_inline_js() {
 		$options = get_option( $this->prefix.'_options' );
 		echo "<script type='text/javascript'\n";
-		echo 'src = '. $options['collector_url'].'>';
+		echo 'src = '. wp_json_encode($options['collector_url']) .'>';
 		echo "\n</script>"; 
 	}
 
